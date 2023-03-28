@@ -1,0 +1,65 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitlabSourceLink", "src\GitlabSourceLink\GitlabSourceLink.csproj", "{D47FDDF9-B47A-411C-B6A0-F59A6C9555F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitlabSourceLink.Examples", "src\GitlabSourceLink.Examples\GitlabSourceLink.Examples.csproj", "{276D1EB6-57A2-4808-AC3F-DCC14E996C30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitlabSourceLink.Tests", "src\GitlabSourceLink.Tests\GitlabSourceLink.Tests.csproj", "{24047F09-FAE0-4920-BFDB-0D8D3064B403}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Items", "_Items", "{EF1D19B3-97F1-4504-95AB-BE249F5BF29A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Packages.props = src\Directory.Packages.props
+		src\Directory.Build.targets = src\Directory.Build.targets
+		src\ProjectInfo.props = src\ProjectInfo.props
+		src\Directory.Packages.Analyzers.props = src\Directory.Packages.Analyzers.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Imports", "_Imports", "{D6E44C0A-ACC6-49BE-B28A-0898406AE276}"
+	ProjectSection(SolutionItems) = preProject
+		imports\Project_Application.props = imports\Project_Application.props
+		imports\Project_Benchmark.props = imports\Project_Benchmark.props
+		imports\Project_Example.props = imports\Project_Example.props
+		imports\Project_Library.props = imports\Project_Library.props
+		imports\Project_Test.props = imports\Project_Test.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitlabSourceLink.Benchmarks", "src\GitlabSourceLink.Benchmarks\GitlabSourceLink.Benchmarks.csproj", "{0DCA9367-838B-46C8-8699-655A5183A549}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D47FDDF9-B47A-411C-B6A0-F59A6C9555F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47FDDF9-B47A-411C-B6A0-F59A6C9555F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47FDDF9-B47A-411C-B6A0-F59A6C9555F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47FDDF9-B47A-411C-B6A0-F59A6C9555F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276D1EB6-57A2-4808-AC3F-DCC14E996C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276D1EB6-57A2-4808-AC3F-DCC14E996C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276D1EB6-57A2-4808-AC3F-DCC14E996C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276D1EB6-57A2-4808-AC3F-DCC14E996C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24047F09-FAE0-4920-BFDB-0D8D3064B403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24047F09-FAE0-4920-BFDB-0D8D3064B403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24047F09-FAE0-4920-BFDB-0D8D3064B403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24047F09-FAE0-4920-BFDB-0D8D3064B403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCA9367-838B-46C8-8699-655A5183A549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCA9367-838B-46C8-8699-655A5183A549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCA9367-838B-46C8-8699-655A5183A549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCA9367-838B-46C8-8699-655A5183A549}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9354605-C154-495A-B990-F6AB329CDE39}
+	EndGlobalSection
+EndGlobal

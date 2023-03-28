@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\imports\Project_Test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" />
+    <PackageReference Include="Microsoft.Build" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" />
+  </ItemGroup>
+
+</Project>
