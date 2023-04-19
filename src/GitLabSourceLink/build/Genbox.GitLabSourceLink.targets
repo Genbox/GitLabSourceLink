@@ -1,0 +1,39 @@
+<Project TreatAsLocalProperty="TaskFolder;TaskAssembly">
+  <PropertyGroup>
+    <TaskFolder Condition=" '$(MSBuildRuntimeType)' == 'Core' ">netcoreapp3.1</TaskFolder>
+    <TaskFolder Condition=" '$(MSBuildRuntimeType)' != 'Core' ">net472</TaskFolder>
+    <TaskAssembly>$(MSBuildThisFileDirectory)..\tasks\$(TaskFolder)\Genbox.GitLabSourceLink.dll</TaskAssembly>
+
+    <!-- This is needed by Roslyn to generate relative paths in the PDB-->
+    <DeterministicSourcePaths>true</DeterministicSourcePaths>
+  </PropertyGroup>
+
+  <UsingTask TaskName="Genbox.GitLabSourceLink.GenerateSourceLinkFile" AssemblyFile="$(TaskAssembly)" />
+
+  <Target Name="GenerateSourceLinkTarget" DependsOnTargets="InitializeSourceControlInformationFromSourceControlManager;InitializeSourceRootMappedPaths" BeforeTargets="CoreCompile">
+    <Microsoft.Build.Tasks.Git.GetUntrackedFiles
+      RepositoryId="$(_GitRepositoryId)"
+      ConfigurationScope="$(GitRepositoryConfigurationScope)"
+      ProjectDirectory="$(MSBuildProjectDirectory)"
+      Files="@(Compile)">
+
+      <Output TaskParameter="UntrackedFiles" ItemName="EmbeddedFiles" />
+    </Microsoft.Build.Tasks.Git.GetUntrackedFiles>
+
+    <GenerateSourceLinkFile UntrackedFiles="@(EmbeddedFiles)"
+                            OutputFile="$(IntermediateOutputPath)$(AssemblyName).sourcelink.json"
+                            SourceFiles="@(Compile)"
+                            SourceRoots="@(SourceRoot)"
+                            GitLabUrl="$(ScmRepositoryUrl)"
+                            Revision="$(SourceRevisionId)">
+
+      <Output TaskParameter="Root" PropertyName="Root" />
+    </GenerateSourceLinkFile>
+
+    <PropertyGroup>
+      <PathMap>$(Root)=/_/,$(PathMap)</PathMap>
+      <SourceLink>$(IntermediateOutputPath)$(AssemblyName).sourcelink.json</SourceLink>
+    </PropertyGroup>
+
+  </Target>
+</Project>
