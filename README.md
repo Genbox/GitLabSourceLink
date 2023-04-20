@@ -71,11 +71,13 @@ When the PathMap and SourceLink variables are suppled to the compiler, it genera
 
 ### FAQ
 
-* Q: Will it work with private GitLab repositories hosted on GitLab.com?
-* A: I assume it will, but have not tested it. However, I believe that you can use [Microsoft.SourceLink.GitLab](https://www.nuget.org/packages/Microsoft.SourceLink.GitLab) for the soruce link, and [GCM](https://github.com/git-ecosystem/git-credential-manager) in your Git client (Git, VS, VS Code, Rider, etc.) for the authentication to gitlab.com.
+* **Q: Will it work with private GitLab repositories hosted on GitLab.com?**
+* A: I assume it will, but have not tested it. However, I believe that you can use [Microsoft.SourceLink.GitLab](https://www.nuget.org/packages/Microsoft.SourceLink.GitLab) for the source link, and [GCM](https://github.com/git-ecosystem/git-credential-manager) in your IDE (VS, VS Code, Rider, etc.) for the authentication to gitlab.com.
 
-* Q: Are there any options? Like setting SCM URL, embedding of untracked sources? others?
+
+* **Q: Are there any options? Like setting repository URL, embedding of untracked sources? others?**
 * A: No. This is a PoC. Everything is setup to work with most configuration.
 
-* Q: Source links are present in the PDB, but how do I authenticate?
-* A: That is outside the scope of this project. I've tested both [Personal Access Tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) and [OAuth](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/gitlab.md). They work just fine.
+
+* **Q: Source link is working, but how do I authenticate?**
+* A: Authentication is outside the scope of this project. However, I've tested both [Personal Access Tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) and [OAuth](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/gitlab.md). They work just fine.
