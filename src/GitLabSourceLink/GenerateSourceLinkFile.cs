@@ -109,14 +109,14 @@ public class GenerateSourceLinkFile : Task
 
     private static string GetRelativePath(string relativeTo, string path)
     {
-#if NET472
+#if NETSTANDARD
         return MakeRelativePath(relativeTo, path);
 #else
         return Path.GetRelativePath(relativeTo, path);
 #endif
     }
 
-#if NET472
+#if NETSTANDARD
     private static string MakeRelativePath(string fromPath, string toPath)
     {
         if (string.IsNullOrEmpty(fromPath))
