@@ -21,7 +21,7 @@
     </Microsoft.Build.Tasks.Git.GetUntrackedFiles>
 
     <GenerateSourceLinkFile UntrackedFiles="@(EmbeddedFiles)"
-                            OutputFile="$(IntermediateOutputPath)$(AssemblyName).sourcelink.json"
+                            OutputFile="$(IntermediateOutputPath)$(AssemblyName).genbox.sourcelink.json"
                             SourceFiles="@(Compile)"
                             SourceRoots="@(SourceRoot)"
                             GitLabUrl="$(ScmRepositoryUrl)"
@@ -32,7 +32,7 @@
 
     <PropertyGroup>
       <PathMap>$(Root)=/_/,$(PathMap)</PathMap>
-      <SourceLink>$(IntermediateOutputPath)$(AssemblyName).sourcelink.json</SourceLink>
+      <SourceLink>$(IntermediateOutputPath)$(AssemblyName).genbox.sourcelink.json</SourceLink>
     </PropertyGroup>
 
   </Target>
