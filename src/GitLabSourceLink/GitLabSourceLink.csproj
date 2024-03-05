@@ -5,7 +5,7 @@
     <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\nuget-packages\</PackageOutputPath>
     <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
